@@ -19,15 +19,14 @@ main {
 
 body {
   color: #fff;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, rgb(74, 192, 74));
-  background-size: 400% 400%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
+  background: #EB3349;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   padding: 12px;
 
   .wrapper {
-		max-width: 700px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -35,15 +34,15 @@ body {
 
     h1 {
       margin-bottom: 24px;
-			font-size: 2rem;
-			text-align: center;
-			line-height: 2rem;
-		}
-		
-		h2 {
-			margin-bottom: 24px;
-			font-size: 1.5rem;
-		}
+      font-size: 2rem;
+      text-align: center;
+      line-height: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      font-size: 1.5rem;
+    }
 
     .svg-wrapper {
       position: relative;
@@ -51,13 +50,13 @@ body {
       .arrow {
         width: 0;
         height: 0;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-top: 40px solid rgb(0, 0, 0);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 30px solid rgb(0, 0, 0);
         position: absolute;
         left: 50%;
-				transform: translateX(-50%);
-				z-index: 1;
+        transform: translateX(-50%);
+        z-index: 1;
       }
 
       svg {
@@ -87,25 +86,25 @@ body {
       outline: none;
       cursor: pointer;
       line-height: 1.5rem;
-			margin-bottom: 24px;
-			background: #3ecf8e;
-			
-			&:hover {
-				box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-				transform: translateY(-1px);
-			}
-	
-			&:active {
-				transform: translateY(1px);
-				box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25), 0 3px 7px -3px rgba(0, 0, 0, 0.3);
-			}
-		}
-		
-		.result {
-			max-width: 300px;
-			font-size: 1.3rem;
-			text-align: center;
-			line-height: 2rem;
-		}
+      margin-bottom: 24px;
+      background: #3ecf8e;
+
+      &:hover {
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25), 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .result {
+      max-width: 300px;
+      font-size: 1.3rem;
+      text-align: center;
+      line-height: 2rem;
+    }
   }
 }
