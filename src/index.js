@@ -1,4 +1,6 @@
 import "./main.scss";
+const scrollToElement = require('scroll-to-element');
+
 
 function getMiddle(x1, y1, x2, y2, howFar) {
     return {
@@ -111,6 +113,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
 document.querySelector('button').addEventListener('click', showWinner);
 
 let degrees = 0;
@@ -119,6 +122,8 @@ let setIntervalId;
 let setTimeoutId;
 let isColored = false;
 const result = document.querySelector('.result');
+
+
 
 function showWinner() {
     if (winnerParty) {
@@ -144,5 +149,14 @@ function showWinner() {
         isColored ? winnerParty.path.setAttributeNS(null, "fill", 'rgb(255,215,0)') : winnerParty.path.setAttributeNS(null, "fill", '#ae00ff');
         
         result.innerHTML = `Tillykke du skal stemme på <strong>${winnerParty.name} - ${winnerParty.letter} </strong>`;
+
+        scrollToElement(result, {
+            ease: 'out-bounce',
+            duration: 400,
+            offset: 1500,
+        });
     }, 3000);
 }
+
+
+
