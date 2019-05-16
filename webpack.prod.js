@@ -5,8 +5,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const SocialTags = require('social-tags-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'dist');
+
+console.log(88888);
 
 module.exports = {
     devtool: 'source-map',
@@ -131,6 +134,29 @@ module.exports = {
                 }
             },
             canPrint: true
-        })
+        }),
+        new SocialTags({
+            appUrl: 'https://benna100.github.io/random-parti/',
+            facebook: {
+              'fb:app_id': "123456789",
+              'og:url': "https://benna100.github.io/random-parti/",
+              'og:type': "website",
+              'og:title': "Parti Lykkehjulet - Få hjælp til at vælge et tilfældigt parti",
+              'og:image': './src/assets/social.png',
+              'og:description': "Til dig der ikke aner hvad du skal stemme på!",
+              'og:site_name': "Parti Lykkehjulet - Få hjælp til at vælge et tilfældigt parti",
+              'og:locale': "da",
+              'og:article:author': "Benjamin Dalsgaard Hughes",
+            },
+            twitter: {
+              "twitter:card": "summary",
+              "twitter:site": "@site_account",
+              "twitter:creator": "@DalsHughes",
+              "twitter:url": "https://benna100.github.io/random-parti/",
+              "twitter:title": "Parti Lykkehjulet - Få hjælp til at vælge et tilfældigt parti",
+              "twitter:description": "Til dig der ikke aner hvad du skal stemme på!",
+              "twitter:image": './src/assets/social.png'
+            },
+          })
     ]
 };

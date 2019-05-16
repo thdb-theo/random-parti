@@ -19,9 +19,13 @@ main {
 
 body {
   color: #fff;
-  background: #EB3349;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #eb3349; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f45c43, #eb3349); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f45c43,
+    #eb3349
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   padding: 12px;
 
@@ -36,12 +40,14 @@ background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, F
       margin-bottom: 24px;
       font-size: 2rem;
       text-align: center;
-      line-height: 2rem;
+      line-height: 2.5rem;
     }
 
     h2 {
       margin-bottom: 24px;
-      font-size: 1.5rem;
+			font-size: 1.5rem;
+			text-align: center;
+      line-height: 2.5rem;
     }
 
     .svg-wrapper {
