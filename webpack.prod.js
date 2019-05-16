@@ -9,8 +9,6 @@ const SocialTags = require('social-tags-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'dist');
 
-console.log(88888);
-
 module.exports = {
     devtool: 'source-map',
     entry: './src/index.js',
