@@ -1,0 +1,4 @@
+
+> @2.0.0 start /home/theo/Documents/Scripts/random-parti
+> webpack-dev-server --config webpack.dev.js --mode development
+

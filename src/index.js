@@ -12,57 +12,37 @@ function getMiddle(x1, y1, x2, y2, howFar) {
 let parties = [
     {
         letter: 'A',
-        name: 'Social Demokratiet',
+        name: 'Arbeiderpartiet',
         color: 'rgb(171, 37, 33)',
     }, {
         letter: 'V',
         name: 'Venstre',
-        color: 'rgb(41, 77, 117)',
-    }, {
-        letter: 'O',
-        name: 'Dansk Folkeparti',
-        color: 'rgb(242, 212, 81)',
-    }, {
-        letter: 'Ø',
-        name: 'Enhedslisten',
-        color: 'rgb(237, 127, 26)',
+        color: 'rgb(1, 227, 27)',
     }, {
         letter: 'F',
-        name: 'Socialistisk Folkeparti',
-        color: 'rgb(203, 9, 109)',
-    }, {
-        letter: 'B',
-        name: 'Radikale',
-        color: 'rgb(131, 58, 147)',
-    }, {
-        letter: 'C',
-        name: 'Konservative',
-        color: 'rgb(140, 163, 35)',
-    }, {
-        letter: 'I',
-        name: 'Liberal Alliance',
-        color: 'rgb(30, 175, 183)',
-    }, {
-        letter: 'Å',
-        name: 'Alternativet',
-        color: 'rgb(42, 145, 56)',
-    }, {
-        letter: 'D',
-        name: 'Nye Borgerlige',
-        color: 'rgb(18, 124, 128)',
-    }, {
-        letter: 'P',
-        name: 'Stram Kurs',
-        color: 'rgb(153, 143, 77)',
-    }, {
-        letter: 'E',
-        name: 'Klaus Riskær pedersen',
-        color: 'rgb(108, 139, 184)',
+        name: 'Fremskritspartiet',
+        color: 'rgb(242, 212, 81)',
     }, {
         letter: 'K',
-        name: 'Kristen Demolraterne',
-        color: 'rgb(137, 133, 113)',
-    }
+        name: 'Kristlig Folkeparti',
+        color: 'rgb(237, 127, 26)',
+    }, {
+        letter: 'S',
+        name: 'Socialistisk Venstreparti',
+        color: 'rgb(203, 9, 109)',
+    }, {
+        letter: 'R',
+        name: 'Rødt',
+        color: 'rgb(205, 40, 27)',
+    }, {
+        letter: 'H',
+        name: 'Høyre',
+        color: 'rgb(10, 13, 230)',
+    }, {
+        letter: 'M',
+        name: 'Miljøpartiet De Grønne',
+        color: 'rgb(60, 230, 20)',
+    } 
 ];
 
 const wheelOfFortune = document.getElementById('wheel-of-fortune');
@@ -148,7 +128,7 @@ function showWinner() {
         isColored = !isColored;
         isColored ? winnerParty.path.setAttributeNS(null, "fill", 'rgb(255,215,0)') : winnerParty.path.setAttributeNS(null, "fill", '#ae00ff');
         
-        result.innerHTML = `Tillykke du skal stemme på <strong>${winnerParty.name} - ${winnerParty.letter} </strong>`;
+        result.innerHTML = `Gratulerer! Du skal stemme på <strong>${winnerParty.name} - ${winnerParty.letter} </strong>`;
 
         scrollToElement(result, {
             ease: 'out-bounce',
