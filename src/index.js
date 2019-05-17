@@ -24,7 +24,7 @@ let parties = [
         color: 'rgb(242, 212, 81)',
     }, {
         letter: 'K',
-        name: 'Kristlig Folkeparti',
+        name: 'Kristelig Folkeparti',
         color: 'rgb(237, 127, 26)',
     }, {
         letter: 'S',
@@ -42,7 +42,7 @@ let parties = [
         letter: 'M',
         name: 'Miljøpartiet De Grønne',
         color: 'rgb(60, 230, 20)',
-    } , {
+    }, {
         letter: "B",
         name: "Senterpartiet",
         color: "rgb(10, 200, 20)"
@@ -73,7 +73,7 @@ function createWheelOfFortune(cx, cy, r, slices) {
         text.setAttributeNS(null, 'style', `transform: rotate(${fromAngle + 98}deg); transform-origin: ${middle.x}px ${middle.y}px;`);
         const textNode = document.createTextNode(party.letter);
         text.appendChild(textNode);
-        
+
         const d = 'M' + cx + ',' + cy + ' L' + fromCoordX + ',' + fromCoordY + ' A' + r + ',' + r + ' 0 0,1 ' + toCoordX + ',' + toCoordY + 'z';
         path.setAttributeNS(null, "d", d);
         path.setAttributeNS(null, "fill", party.color);
@@ -131,7 +131,7 @@ function showWinner() {
         }, 300);
         isColored = !isColored;
         isColored ? winnerParty.path.setAttributeNS(null, "fill", 'rgb(255,215,0)') : winnerParty.path.setAttributeNS(null, "fill", '#ae00ff');
-        
+
         result.innerHTML = `Gratulerer! Du skal stemme på <strong>${winnerParty.name} - ${winnerParty.letter} </strong>`;
 
         scrollToElement(result, {
