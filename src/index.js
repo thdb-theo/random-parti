@@ -42,7 +42,11 @@ let parties = [
         letter: 'M',
         name: 'Miljøpartiet De Grønne',
         color: 'rgb(60, 230, 20)',
-    } 
+    } , {
+        letter: "B",
+        name: "Senterpartiet",
+        color: "rgb(10, 200, 20)"
+    }
 ];
 
 const wheelOfFortune = document.getElementById('wheel-of-fortune');
